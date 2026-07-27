@@ -69,15 +69,16 @@ button {
     position: relative;
 
     width: 100%;
+
+    min-height: 1024px;
+
     max-width: 1440px;
-    height: 1024px;
 
     margin: 0 auto;
 
     overflow: hidden;
 
 }
-
 
 /* ==========================================================
    HERO IMAGE
@@ -94,6 +95,7 @@ button {
     overflow: hidden;
 
 }
+
 .hero__image img {
 
     width: 100%;
@@ -143,7 +145,6 @@ button {
     object-fit: contain;
 
 }
-
 
 /* ==========================================================
    HERO CONTENT
@@ -297,6 +298,8 @@ button {
     color: #FFFFFF;
 
 }
+
+
 
 /* ==========================================================
    SOCIAL
@@ -622,4 +625,4 @@ button:focus-visible {
 
 /* ==========================================================
    END
-========================================================== */
+========

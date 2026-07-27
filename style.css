@@ -299,7 +299,7 @@ button {
 
 
 /* ==========================================================
-   SOCIAL
+   SOCIAL LINKS
 ========================================================== */
 
 .social-links {
@@ -310,41 +310,32 @@ button {
     bottom: 46px;
 
     display: flex;
+    align-items: center;
     gap: 12px;
 
-    z-index: 30;
+    z-index: 100;
 
 }
+
 .social-links a {
 
     display: flex;
-
+    justify-content: center;
     align-items: center;
 
-    justify-content: center;
-
     width: 40px;
-
     height: 40px;
-
-    transition: transform .25s ease;
-
-}
-
-.social-links a:hover {
-
-    transform: translateY(-3px);
 
 }
 
 .social-links img {
 
     width: 40px;
-
     height: 40px;
 
-}
+    display: block;
 
+}
 
 
 /* ==========================================================

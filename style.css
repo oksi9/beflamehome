@@ -90,7 +90,7 @@ button {
 
     inset: 0;
 
-    z-index: 0;
+    z-index: 1;
 
     overflow: hidden;
 
@@ -117,7 +117,7 @@ button {
 
     position: absolute;
 
-    top: 46px;
+    top: 24px;
     left: 80px;
 
     width: 156px;
@@ -150,19 +150,20 @@ button {
    HERO CONTENT
 ========================================================== */
 
-.hero__content{
+.hero__content {
 
-    position:absolute;
+    position: absolute;
 
-    left:80px;
+    top: 180px;
+    left: 80px;
 
-    top:60px;
+    width: 620px;
 
-    width:620px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
 
-    display:flex;
-
-    flex-direction:column;
+    z-index: 10;
 
 }
 

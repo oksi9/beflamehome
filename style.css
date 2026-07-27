@@ -11,7 +11,6 @@
   padding:0;
   box-sizing:border-box;
 }
-
 :root{
   --bg:#C3A889;
   --text:#1F1F1F;
@@ -22,9 +21,7 @@
   --container:1280px;
   --font:"Geist",sans-serif;
 }
-
 html{scroll-behavior:smooth;}
-
 body{
   min-height:100vh;
   font-family:var(--font);
@@ -32,29 +29,24 @@ body{
   color:var(--text);
   -webkit-font-smoothing:antialiased;
 }
-
 img{
   display:block;
   max-width:100%;
   height:auto;
 }
-
 a{
   color:inherit;
   text-decoration:none;
 }
-
 .container{
   width:min(1280px,calc(100% - 120px));
   margin:0 auto;
 }
-
 .hero{
   position:relative;
   min-height:100vh;
   overflow:hidden;
 }
-
 .hero .container{
   min-height:100vh;
   display:grid;
@@ -62,72 +54,82 @@ a{
   align-items:center;
   gap:60px;
 }
-
 .hero__content{
   z-index:2;
 }
-
 .logo{
   display:inline-block;
   width:160px;
   margin-bottom:110px;
 }
-
 .logo img{
   width:100%;
 }
-
-.hero__title{
-  font-size:64px;
-  font-weight:500;
-  line-height:1.15;
-  letter-spacing:-0.03em;
-  max-width:620px;
-  margin-bottom:24px;
+.hero__title {
+    font-family: "Geist", sans-serif;
+    font-size: 64px;
+    font-weight: 500;
+    line-height: 120%;
+    letter-spacing: -0.03em;
+    color: var(--color-heading);
 }
-
-.hero__text{
-  max-width:520px;
-  font-size:20px;
-  line-height:1.55;
-  margin-bottom:42px;
+.hero__text {
+    font-family: "Geist", sans-serif;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 140%;
+    color: var(--color-text);
+    max-width: 520px;
+    margin-bottom: 40px;
+.hero__buttons {
+    display: flex;
+    align-items: center;
+    gap: 16px;
 }
-
-.hero__buttons{
-  display:flex;
-  gap:16px;
+.hero__buttons {
+    display: flex;
+    align-items: center;
+    gap: 16px;
 }
-
-.btn{
-  display:inline-flex;
-  justify-content:center;
-  align-items:center;
-  height:52px;
-  padding:0 28px;
-  border-radius:12px;
-  font-size:18px;
-  font-weight:500;
-  transition:.25s ease;
+/* Base Button */
+.btn {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    padding: 12px;
+    gap: 10px;
+    border-radius: 12px;
+    font-family: "Geist", sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 120%;
+    text-decoration: none;
+    cursor: pointer;
+    transition: all .25s ease;
 }
-
-.btn--primary{
-  background:var(--green);
-  color:var(--white);
+/* Shop on Etsy */
+.btn--primary {
+    width: 160px;
+    height: 46px;
+    border: none;
+    background-color: #163F35;
+    color: #FFFFFF;
 }
-
-.btn--primary:hover{
-  background:var(--green-hover);
+.btn--primary:hover {
+    background-color: #102F28;
 }
-
-.btn--secondary{
-  border:1.5px solid var(--border);
+/* Wholesale */
+.btn--secondary {
+    width: 132px;
+    height: 46px;
+    background: transparent;
+    border: 1px solid #1E1E1E;
+    color: #1E1E1E;
 }
-
-.btn--secondary:hover{
-  background:var(--text);
-  color:var(--white);
+.btn--secondary:hover {
+    background-color: #1E1E1E;
+    color: #FFFFFF;
 }
-
 .hero__image{
   position:relative;
   height:100vh;
@@ -135,14 +137,12 @@ a{
   justify-content:flex-end;
   align-items:flex-end;
 }
-
 .hero__image img{
   width:100%;
   height:100%;
   object-fit:cover;
   object-position:right center;
 }
-
 .social-links{
   position:absolute;
   left:50%;
@@ -151,62 +151,48 @@ a{
   display:flex;
   gap:18px;
 }
-
 .social-links a{
   transition:.25s ease;
 }
-
 .social-links a:hover{
   transform:translateY(-3px);
 }
-
 .social-links img{
   width:26px;
   height:26px;
 }
-
 @media (max-width:900px){
-
   .container{
     width:calc(100% - 40px);
   }
-
   .hero .container{
     grid-template-columns:1fr;
     padding:48px 0 120px;
     gap:40px;
   }
-
   .logo{
     margin-bottom:60px;
   }
-
   .hero__title{
     font-size:44px;
   }
-
   .hero__text{
     font-size:18px;
   }
-
   .hero__buttons{
     flex-direction:column;
     align-items:stretch;
   }
-
   .btn{
     width:100%;
   }
-
   .hero__image{
     height:auto;
   }
-
   .hero__image img{
     height:auto;
     object-fit:contain;
   }
-
   .social-links{
     bottom:24px;
   }

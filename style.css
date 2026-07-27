@@ -91,14 +91,18 @@ button {
 
     z-index: 0;
 
-}
+    overflow: hidden;
 
+}
 .hero__image img {
 
     width: 100%;
+
     height: 100%;
 
     object-fit: cover;
+
+    object-position: center;
 
 }
 
@@ -111,17 +115,27 @@ button {
 
     position: absolute;
 
+    top: -20px;
     left: 80px;
-    top: 46px;
 
     width: 156px;
     height: 53px;
 
     z-index: 20;
 
+    transition: opacity .25s ease;
+
+}
+
+.logo:hover {
+
+    opacity: .9;
+
 }
 
 .logo img {
+
+    display: block;
 
     width: 100%;
     height: 100%;
@@ -135,23 +149,21 @@ button {
    HERO CONTENT
 ========================================================== */
 
-.hero__content {
+.hero__content{
 
-    position: absolute;
+    position:absolute;
 
-    left: 80px;
-    top: 214px;
+    left:80px;
 
-    width: 620px;
+    top:60px;
 
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
+    width:620px;
 
-    z-index: 10;
+    display:flex;
+
+    flex-direction:column;
 
 }
-
 
 /* ==========================================================
    TITLE
@@ -285,8 +297,6 @@ button {
     color: #FFFFFF;
 
 }
-
-
 
 /* ==========================================================
    SOCIAL

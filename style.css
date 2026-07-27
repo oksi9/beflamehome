@@ -311,19 +311,15 @@ button {
     position: absolute;
 
     left: 648px;
-
-    top: 808px;
+    top: 868px;
 
     display: flex;
-
     align-items: center;
-
     gap: 12px;
 
     z-index: 20;
 
 }
-
 .social-links a {
 
     display: flex;

@@ -117,7 +117,7 @@ button {
 
     position: absolute;
 
-    top: 46px;
+    top: 40px;
     left: 80px;
 
     width: 156px;
@@ -307,7 +307,7 @@ button {
     position: absolute;
 
     left: 50%;
-    top: 850px;
+    top: 900px;
 
     transform: translateX(-50%);
 

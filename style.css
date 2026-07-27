@@ -306,32 +306,41 @@ button {
 
     position: absolute;
 
-    left: 80px;
+    left: 50%;
     top: 850px;
 
+    transform: translateX(-50%);
+
     display: flex;
+    align-items: center;
     gap: 12px;
 
-    z-index: 9999;
-
-    border: 2px solid red;
+    z-index: 100;
 
 }
 
 .social-links a {
 
-    width: 40px;
-    height: 40px;
-
     display: flex;
     justify-content: center;
     align-items: center;
 
-    background: yellow;
+    width: 40px;
+    height: 40px;
+
+    transition: transform .25s ease;
+
+}
+
+.social-links a:hover {
+
+    transform: translateY(-3px);
 
 }
 
 .social-links img {
+
+    display: block;
 
     width: 40px;
     height: 40px;

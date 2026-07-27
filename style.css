@@ -1,199 +1,615 @@
 /* ==========================================================
    BEFLAME HOME
    Author: Oksana Diachenko
-   Version: 1.0
+========================================================== */
+
+
+/* ==========================================================
+   RESET
 ========================================================== */
 
 *,
 *::before,
-*::after{
-  margin:0;
-  padding:0;
-  box-sizing:border-box;
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
-:root{
-  --bg:#C3A889;
-  --text:#1F1F1F;
-  --green:#163F35;
-  --green-hover:#102F28;
-  --white:#fff;
-  --border:#1F1F1F;
-  --container:1280px;
-  --font:"Geist",sans-serif;
+
+html {
+    scroll-behavior: smooth;
 }
-html{scroll-behavior:smooth;}
-body{
-  min-height:100vh;
-  font-family:var(--font);
-  background:var(--bg);
-  color:var(--text);
-  -webkit-font-smoothing:antialiased;
+
+body {
+    font-family: "Geist", sans-serif;
+    color: #1E1E1E;
+    background: #ffffff;
+    overflow-x: hidden;
 }
-img{
-  display:block;
-  max-width:100%;
-  height:auto;
+
+img {
+    display: block;
+    max-width: 100%;
 }
-a{
-  color:inherit;
-  text-decoration:none;
+
+a {
+    text-decoration: none;
+    color: inherit;
 }
-.container{
-  width:min(1280px,calc(100% - 120px));
-  margin:0 auto;
+
+button {
+    border: none;
+    background: none;
+    font: inherit;
 }
-.hero{
-  position:relative;
-  min-height:100vh;
-  overflow:hidden;
+
+
+/* ==========================================================
+   VARIABLES
+========================================================== */
+
+:root {
+
+    --green: #163F35;
+    --green-hover: #0F2D25;
+    --text: #1E1E1E;
+    --white: #FFFFFF;
+
+    --container-width: 1440px;
+
 }
-.hero .container{
-  min-height:100vh;
-  display:grid;
-  grid-template-columns:520px 1fr;
-  align-items:center;
-  gap:60px;
+
+
+/* ==========================================================
+   HERO
+========================================================== */
+
+.hero {
+
+    position: relative;
+
+    width: 100%;
+    max-width: 1440px;
+    height: 1024px;
+
+    margin: 0 auto;
+
+    overflow: hidden;
+
 }
-.hero__content{
-  z-index:2;
+
+
+/* ==========================================================
+   HERO IMAGE
+========================================================== */
+
+.hero__image {
+
+    position: absolute;
+
+    inset: 0;
+
+    z-index: 0;
+
 }
-.logo{
-  display:inline-block;
-  width:160px;
-  margin-bottom:110px;
+
+.hero__image img {
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
 }
-.logo img{
-  width:100%;
+
+
+/* ==========================================================
+   LOGO
+========================================================== */
+
+.logo {
+
+    position: absolute;
+
+    left: 80px;
+    top: 46px;
+
+    width: 156px;
+    height: 53px;
+
+    z-index: 20;
+
 }
+
+.logo img {
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: contain;
+
+}
+
+
+/* ==========================================================
+   HERO CONTENT
+========================================================== */
+
+.hero__content {
+
+    position: absolute;
+
+    left: 80px;
+    top: 214px;
+
+    width: 620px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+    z-index: 10;
+
+}
+
+
+/* ==========================================================
+   TITLE
+========================================================== */
+
 .hero__title {
+
+    width: 620px;
+
+    margin-bottom: 24px;
+
     font-family: "Geist", sans-serif;
+
     font-size: 64px;
+
     font-weight: 500;
+
     line-height: 120%;
-    letter-spacing: -0.03em;
-    color: var(--color-heading);
+
+    letter-spacing: 0;
+
+    text-transform: uppercase;
+
+    color: #1E1E1E;
+
 }
+
+
+/* ==========================================================
+   BODY TEXT
+========================================================== */
+
 .hero__text {
-    font-family: "Geist", sans-serif;
-    font-size: 20px;
-    font-weight: 400;
-    line-height: 140%;
-    color: var(--color-text);
-    max-width: 520px;
+
+    width: 620px;
+
     margin-bottom: 40px;
+
+    font-family: "Geist", sans-serif;
+
+    font-size: 20px;
+
+    font-weight: 400;
+
+    line-height: 140%;
+
+    letter-spacing: 0;
+
+    color: #1E1E1E;
+
+}
+/* ==========================================================
+   BUTTONS
+========================================================== */
+
 .hero__buttons {
+
     display: flex;
     align-items: center;
     gap: 16px;
+
 }
-.hero__buttons {
-    display: flex;
-    align-items: center;
-    gap: 16px;
-}
+
+
 /* Base Button */
+
 .btn {
+
     display: inline-flex;
     justify-content: center;
     align-items: center;
+
     padding: 12px;
-    gap: 10px;
+
     border-radius: 12px;
+
     font-family: "Geist", sans-serif;
+
     font-size: 18px;
+
     font-weight: 400;
+
     line-height: 120%;
-    text-decoration: none;
-    cursor: pointer;
+
     transition: all .25s ease;
+
+    cursor: pointer;
+
 }
+
+
 /* Shop on Etsy */
+
 .btn--primary {
+
     width: 160px;
     height: 46px;
-    border: none;
-    background-color: #163F35;
+
+    background: #163F35;
+
     color: #FFFFFF;
+
 }
+
 .btn--primary:hover {
-    background-color: #102F28;
+
+    background: #0F2D25;
+
 }
+
+
 /* Wholesale */
+
 .btn--secondary {
+
     width: 132px;
     height: 46px;
-    background: transparent;
+
     border: 1px solid #1E1E1E;
+
+    background: transparent;
+
     color: #1E1E1E;
+
 }
+
 .btn--secondary:hover {
-    background-color: #1E1E1E;
+
+    background: #1E1E1E;
+
     color: #FFFFFF;
+
 }
-.hero__image{
-  position:relative;
-  height:100vh;
-  display:flex;
-  justify-content:flex-end;
-  align-items:flex-end;
+
+
+
+/* ==========================================================
+   SOCIAL
+========================================================== */
+
+.social-links {
+
+    position: absolute;
+
+    left: 648px;
+
+    top: 808px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    z-index: 20;
+
 }
-.hero__image img{
-  width:100%;
-  height:100%;
-  object-fit:cover;
-  object-position:right center;
+
+.social-links a {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    width: 40px;
+
+    height: 40px;
+
+    transition: transform .25s ease;
+
 }
-.social-links{
-  position:absolute;
-  left:50%;
-  bottom:36px;
-  transform:translateX(-50%);
-  display:flex;
-  gap:18px;
+
+.social-links a:hover {
+
+    transform: translateY(-3px);
+
 }
-.social-links a{
-  transition:.25s ease;
+
+.social-links img {
+
+    width: 40px;
+
+    height: 40px;
+
 }
-.social-links a:hover{
-  transform:translateY(-3px);
+
+
+
+/* ==========================================================
+   TRANSITIONS
+========================================================== */
+
+.logo img,
+.hero__image img,
+.social-links img {
+
+    transition: .3s ease;
+
 }
-.social-links img{
-  width:26px;
-  height:26px;
+
+.logo:hover img {
+
+    transform: scale(1.02);
+
 }
-@media (max-width:900px){
-  .container{
-    width:calc(100% - 40px);
-  }
-  .hero .container{
-    grid-template-columns:1fr;
-    padding:48px 0 120px;
-    gap:40px;
-  }
-  .logo{
-    margin-bottom:60px;
-  }
-  .hero__title{
-    font-size:44px;
-  }
-  .hero__text{
-    font-size:18px;
-  }
-  .hero__buttons{
-    flex-direction:column;
-    align-items:stretch;
-  }
-  .btn{
-    width:100%;
-  }
-  .hero__image{
-    height:auto;
-  }
-  .hero__image img{
-    height:auto;
-    object-fit:contain;
-  }
-  .social-links{
-    bottom:24px;
-  }
+/* ==========================================================
+   RESPONSIVE
+========================================================== */
+
+@media (max-width: 1200px) {
+
+    .hero {
+
+        height: auto;
+        min-height: 100vh;
+
+    }
+
+    .hero__content {
+
+        left: 60px;
+        top: 180px;
+
+        width: 520px;
+
+    }
+
+    .hero__title {
+
+        width: 520px;
+
+        font-size: 54px;
+
+    }
+
+    .hero__text {
+
+        width: 520px;
+
+    }
+
+    .social-links {
+
+        left: 50%;
+        transform: translateX(-50%);
+        top: auto;
+        bottom: 40px;
+
+    }
+
 }
+
+
+
+@media (max-width: 992px) {
+
+    .hero {
+
+        height: auto;
+
+        min-height: 100vh;
+
+    }
+
+    .logo {
+
+        left: 40px;
+        top: 40px;
+
+    }
+
+    .hero__content {
+
+        position: relative;
+
+        top: 180px;
+        left: 40px;
+
+        width: calc(100% - 80px);
+
+    }
+
+    .hero__title {
+
+        width: 100%;
+
+        font-size: 48px;
+
+    }
+
+    .hero__text {
+
+        width: 100%;
+
+        font-size: 18px;
+
+    }
+
+}
+
+
+
+@media (max-width: 768px) {
+
+    .hero {
+
+        min-height: 100vh;
+
+    }
+
+    .logo {
+
+        left: 24px;
+
+        top: 24px;
+
+        width: 140px;
+
+        height: auto;
+
+    }
+
+    .hero__content {
+
+        left: 24px;
+
+        top: 140px;
+
+        width: calc(100% - 48px);
+
+    }
+
+    .hero__title {
+
+        font-size: 42px;
+
+        width: 100%;
+
+    }
+
+    .hero__text {
+
+        width: 100%;
+
+        font-size: 18px;
+
+    }
+
+    .hero__buttons {
+
+        flex-direction: column;
+
+        align-items: flex-start;
+
+        width: 100%;
+
+    }
+
+    .btn {
+
+        width: 100%;
+
+    }
+
+    .btn--primary,
+    .btn--secondary {
+
+        width: 100%;
+
+    }
+
+    .social-links {
+
+        bottom: 24px;
+
+        left: 50%;
+
+        transform: translateX(-50%);
+
+        top: auto;
+
+    }
+
+}
+
+
+
+@media (max-width: 480px) {
+
+    .hero {
+
+        min-height: 100vh;
+
+    }
+
+    .logo {
+
+        width: 120px;
+
+    }
+
+    .hero__content {
+
+        top: 120px;
+
+    }
+
+    .hero__title {
+
+        font-size: 34px;
+
+        line-height: 120%;
+
+    }
+
+    .hero__text {
+
+        font-size: 16px;
+
+        line-height: 150%;
+
+    }
+
+}
+
+
+
+/* ==========================================================
+   SELECTION
+========================================================== */
+
+::selection {
+
+    background: #163F35;
+
+    color: #FFFFFF;
+
+}
+
+
+
+/* ==========================================================
+   FOCUS
+========================================================== */
+
+a:focus-visible,
+button:focus-visible {
+
+    outline: 2px solid #163F35;
+
+    outline-offset: 4px;
+
+}
+
+
+
+/* ==========================================================
+   END
+========================================================== */

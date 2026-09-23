@@ -280,19 +280,16 @@ button {
     width: 132px;
     height: 46px;
 
-    border: 1px solid #1E1E1E;
+    border: none;
+    background: #FFFFFF;
 
-    background: transparent;
-
-    color: #1E1E1E;
-
+    color: #163F35;
 }
 
 .btn--secondary:hover {
 
-    background: #1E1E1E;
-
-    color: #FFFFFF;
+    background: #F3F5F2;
+    color: #163F35;
 
 }
 
